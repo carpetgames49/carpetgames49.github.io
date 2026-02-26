@@ -1,0 +1,63 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full page */
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #380600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Center content */
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* Main title */
+.title {
+    color: #fff;
+    font-size: clamp(40px, 8vw, 120px);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #fff;
+    font-size: clamp(16px, 2vw, 28px);
+    margin-top: 15px;
+    opacity: 0.85;
+}
+
+/* Blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: #fff;
+    margin-left: 6px;
+    animation: blink 1s infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
