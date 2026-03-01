@@ -1,26 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
-    <title>Carpet Games</title>
-    <meta name="description" content="Carpet Games - board game publisher creating board games, card games and social games.">
-    <meta name="keywords" content="board games, board game publisher, card games, social games">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carpet Games</title>
+  <meta name="description" content="Carpet Games - board game publisher">
+  <meta name="keywords" content="board games, board game publisher, card games, social games">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <main class="container">
-        <h1 class="title">Carpet Games</h1>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.png" alt="Carpet Games" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#games">Skjaldborg</a></li>
+      <li><a href="#community">Gamefound</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-        <p class="subtitle">
-            It all started on a carpet...<span class="cursor"></span>
-        </p>
-    </main>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"     onclick="closeMenu()">About</a>
+    <a href="#games"     onclick="closeMenu()">Skjaldborg</a>
+    <a href="#community" onclick="closeMenu()">Gamefound</a>
+    <a href="#contact"   onclick="closeMenu()">Contact</a>
+  </div>
 
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/logo1.png" alt="Carpet Games Logo" class="hero-logo">
+    <h1><span>Carpet Games</span></h1>
+    <p class="hero-subtitle">It all stared on a carpet ...</p>
+    <a href="#games" class="hero-cta">Discover Skjaldborg</a>
+    <a href="#about" class="hero-arrow" aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <polyline points="19 12 12 19 5 12"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text reveal-left">
+        <p class="section-label">About Carpet Games</p>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Passion for Play</h2>
+
+        <div class="about-content">
+          <div class="about-paragraphs">
+            <p>Carpet Games is simply dummy text of the printing and typesetting industry. Carpet Games has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Carpet Games passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Carpet Games.</p>
+          </div>
+          <div class="about-decoration reveal-right delay-2">
+            <img src="images/logo2.png" alt="Carpet Games" class="about-logo">
+          </div>
+        </div>
+        <a href="#" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FEATURED GAME -->
+  <section class="featured" id="games">
+    <div style="max-width:1200px;margin:0 auto;">
+      <p class="section-label">Skjaldborg</p>
+      <div class="gold-divider reveal delay-1"></div>
+      <div class="featured-grid">
+        <div class="game-card reveal-left delay-1">
+          <div class="game-card-image">
+            <img src="images/logo3.png" alt="Skjaldborg" class="game-card-img">
+          </div>
+          <div class="game-card-body">
+            <p class="game-tagline">Game • Victory • Glory</p>
+            <p class="game-desc">Carpet Games is simply dummy text of the printing and typesetting industry. Carpet Games has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Carpet Games passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Carpet Games.</p>
+            <div class="game-highlights">
+              <h4>Core Gameplay Highlights</h4>
+              <div class="highlight-item"><strong>Engine</strong><span>including versions of Carpet Games.</span></div>
+              <div class="highlight-item"><strong>Powers</strong><span>It has survived not only five centuries</span></div>
+              <div class="highlight-item"><strong>Destiny</strong><span>Carpet Games has been the industry's</span></div>
+              <div class="highlight-item"><strong>Turns</strong><span>Fast to play</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px;" class="reveal-right delay-2">
+          <div class="game-stats">
+            <div class="stats-grid">
+              <div class="stat-item"><div class="stat-label">Players</div><div class="stat-value">2</div></div>
+              <div class="stat-item"><div class="stat-label">Play Time</div><div class="stat-value">60–120 min</div></div>
+              <div class="stat-item"><div class="stat-label">Age</div><div class="stat-value">14+</div></div>
+              <div class="stat-item"><div class="stat-label">Status</div><div class="stat-value" style="font-size:0.85rem;">Gamefound<br/>Feb 2027</div></div>
+            </div>
+          </div>
+          <div class="game-stats" style="flex:1;">
+            <p class="game-tagline" style="margin-bottom:14px;">The Story Behind the Name</p>
+            <p class="game-desc">Carpet Games is simply dummy text of the printing and typesetting industry. Carpet Games has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p class="game-desc">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Carpet Games passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Carpet Games.</p>
+          </div>
+          <a href="skjaldborg.html" class="btn-outline" style="text-align:center;">View more about Skjaldborg</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMEFOUND -->
+  <section class="community" id="community">
+    <div class="community-inner">
+      <p class="section-label">Join the Community</p>
+      <div class="gold-divider center reveal delay-1"></div>
+      <h2 class="section-title reveal delay-2">Be Part of the Development</h2>
+      <p class="reveal delay-3">Join to our community to participate in the development process of upcoming games, share your ideas, and connect with other board game enthusiasts.</p>
+      <div class="gamefound-card reveal delay-4">
+        <span class="gamefound-icon">🎲</span>
+        <h3>Gamefound</h3>
+        <p>Connect with fellow board game enthusiasts</p>
+        <ul class="community-list">
+          <li>Get early access to playtesting opportunities</li>
+          <li>Share your ideas and influence game development</li>
+          <li>Connect with me and other board game fans</li>
+          <li>Participate in exclusive events and discussions</li>
+        </ul>
+        <a href="#" class="btn-gamefound">Join to Gamefound</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <h2 class="reveal">Ready to Join the Adventure?</h2>
+    <p class="reveal delay-1">Stay updated on upcoming releases, events, and exclusive offers.</p>
+    <a href="mailto:contact@carpetgames.com" class="btn-outline reveal delay-2">Get in Touch</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Carpet Games</div>
+    <div class="footer-copy">© 2026 Torun, Poland</div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Gamefound</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
 </body>
 </html>
