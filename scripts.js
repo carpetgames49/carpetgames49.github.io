@@ -1,3 +1,11 @@
+// ── translation ──
+const lang = document.documentElement.dataset.lang;
+const labels = {
+  en: { more: 'Read More', less: 'Read Less' },
+  pl: { more: 'Rozwiń',    less: 'Zwiń'      }
+};
+
+
 // ── Hamburger ──
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -40,3 +48,30 @@ window.addEventListener('scroll', () => {
   const progress = Math.min(scrollY / 900, 1);
   nav.style.setProperty('--nav-progress', progress);
 });
+
+// ── Expand text section about ──
+window.toggleAbout = function(btn) {
+  const extra = document.querySelector('.about-extra');
+  const shortParagraph = document.querySelector('.about-short');
+  const decoDefault = document.getElementById('about-deco-default');
+  const decoPeople = document.getElementById('about-deco-people');
+  const isOpen = extra.classList.toggle('open');
+
+  if (isOpen) {
+    shortParagraph.style.display = 'none';
+    decoDefault.classList.add('hide');
+    decoPeople.classList.add('show');
+  } else {
+    shortParagraph.style.display = '';
+    decoDefault.classList.remove('hide');
+    decoPeople.classList.remove('show');
+  }
+
+  btn.textContent = isOpen ? labels[lang].less : labels[lang].more;
+};
+
+// ── Flip card in about section ──
+window.flipCard = function(id) {
+  const card = document.getElementById(id);
+  card.classList.toggle('flipped');
+};

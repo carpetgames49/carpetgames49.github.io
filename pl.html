@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl" data-lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carpet Games</title>
+  <meta name="description" content="Carpet Games - board game publisher">
+  <meta name="keywords" content="board games, board game publisher, card games, social games">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.png" alt="Carpet Games" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">O nas</a></li>
+      <li><a href="#games">Skjaldborg</a></li>
+      <li><a href="#community">Gamefound</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Zmień język" onclick="window.location.href='index.html'">🇬🇧</button>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Zmień język" onclick="window.location.href='index.html'">🇬🇧</button>
+    <a href="#about"     onclick="closeMenu()">O nas</a>
+    <a href="#games"     onclick="closeMenu()">Skjaldborg</a>
+    <a href="#community" onclick="closeMenu()">Gamefound</a>
+    <a href="#contact"   onclick="closeMenu()">Kontakt</a>
+
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/logo1.png" alt="Carpet Games Logo" class="hero-logo">
+    <h1><span>Carpet Games</span></h1>
+    <p class="hero-subtitle">Wszystko zaczęło się na dywanie...</p>
+    <a href="#games" class="hero-cta">Odkryj naszą pierwszą grę</a>
+    <a href="#about" class="hero-arrow" aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <polyline points="19 12 12 19 5 12"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text reveal-left">
+        <p class="section-label">O Carpet Games</p>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Gdzie wszystko się zaczęło</h2>
+        <div class="about-content">
+          <!-- Tekst -->
+          <div class="about-paragraphs">
+            <p>Carpet Games narodziło się w głowach dwóch przyjaciół, Mariusza i Sebastiana. Jeszcze kilka lat temu planszówki nie były częścią naszego świata. Jako zapaleni gracze PC traktowaliśmy je raczej jako coś „obok”. Wszystko zmieniło się w 2023 roku, kiedy znajoma zaprosiła nas na wieczór z grami planszowymi. Najbardziej zaskoczyło nas to, jak dobrze można się przy nich bawić i jak bardzo różni się to od grania na ekranie monitora. To było zupełnie inne doświadczenie. Tydzień później kupiliśmy swoją pierwszą grę, 7 Cudów Świata: Pojedynek i gramy w nią do dziś.</p>
+            <p>W 2025 roku odkryliśmy, że w naszej miejskiej bibliotece można wypożyczać planszówki. To był przełom w naszym życiu! Przez całe pierwsze półrocze testowaliśmy nowe tytuły praktycznie co tydzień.</p>
+            <p class="about-short">Co ciekawe, wszystko toczyło się… na dywanie. →</p>
+            <div class="about-extra">
+              <p>Co ciekawe, wszystko toczyło się… na dywanie. Od pierwszej kupionej gry po kolejne wypożyczone tytuły zawsze graliśmy na podłodze. Nigdy przy stole. Podczas wspólnych rozgrywek zaczęliśmy patrzeć na gry nie tylko jak gracze, lecz coraz częściej jak twórcy. Analizowaliśmy mechaniki, wprowadzaliśmy własne modyfikacje i sprawdzaliśmy, jak wpływają na rozgrywkę. Z czasem pojawiły się luźne myśli: „A gdyby zrobić coś swojego?”. Bez planu i bez konkretów, tylko rozmowy, które stopniowo stawały się coraz poważniejsze. Nawet nie pamiętamy momentu, w którym zaczęliśmy rozpisywać pierwsze pomysły. Po prostu pewnego dnia zorientowaliśmy się, że mamy już tyle materiału, że chcemy podzielić się nim z innymi.</p>
+              <p>To właśnie na dywanie w salonie rodziły się pomysły, dyskusje i pierwsze szkice mechanik. Kiedy zaczęliśmy zastanawiać się nad nazwą firmy, odpowiedź była bliżej niż się spodziewaliśmy. Przecież zawsze graliśmy na dywanie. Tak powstało Carpet Games. Niedługo później narodził się pomysł naszej pierwszej gry, projektu, który dziś rozwijamy pod tytułem „Skjaldborg”.</p>
+            </div>
+          </div>
+          <div class="about-decoration-wrapper reveal-right delay-2">
+            <div id="about-deco-default">
+              <img src="images/logo2.png" alt="Carpet Games" class="about-logo">
+            </div>
+            <!-- Zdjęcia po rozwinięciu -->
+            <div class="about-deco-people" id="about-deco-people">
+              <div class="person-card">
+                <div class="person-card-inner" id="card1">
+                  <div class="person-card-front">
+                    <img src="images/people1.png" alt="Mariusz">
+                  </div>
+                  <div class="person-card-back">
+                    <p>Mario</p>
+                  </div>
+                  <button class="card-flip-btn card-flip-front" onclick="flipCard('card1')">→</button>
+                  <button class="card-flip-btn card-flip-back"  onclick="flipCard('card1')">←</button>
+                </div>
+              </div>
+              <div class="person-card">
+                <div class="person-card-inner" id="card2">
+                  <div class="person-card-front">
+                    <img src="images/people2.png" alt="Sebastian">
+                  </div>
+                  <div class="person-card-back">
+                    <p>Seba</p>
+                  </div>
+                  <button class="card-flip-btn card-flip-front" onclick="flipCard('card2')">→</button>
+                  <button class="card-flip-btn card-flip-back"  onclick="flipCard('card2')">←</button>
+                </div>
+              </div>
+            </div><!-- /.about-deco-people -->
+          </div><!-- /.about-decoration-wrapper -->
+        </div><!-- /.about-content -->
+        <button class="btn-read-more" onclick="toggleAbout(this)">Rozwiń</button>
+      </div><!-- /.about-text -->
+    </div><!-- /.about-inner -->
+  </section>
+
+
+  <!-- FEATURED GAME -->
+  <section class="featured" id="games">
+    <div style="max-width:1200px;margin:0 auto;">
+      <p class="section-label">Skjaldborg</p>
+      <div class="gold-divider reveal delay-1"></div>
+      <div class="game-card-image">
+        <img src="images/logo3.png" alt="Skjaldborg" class="game-card-img">
+      </div>
+      <div class="featured-grid">
+        <div style="display:flex;flex-direction:column;gap:24px;" class="reveal-left delay-2">
+          <div class="game-stats" style="flex:1;">
+            <p class="game-tagline">Gra • Historia • Przygoda</p>
+            <p class="game-desc">Skjaldborg to dwuosobowa, taktyczna gra strategiczna osadzona w rzeczywistych konfliktach lat 793–1066. Każdy scenariusz odtwarza historyczną bitwę, w której stajecie po przeciwnych stronach pola walki jako władcy Wikingów i anglosaskich królestw. To nie jest abstrakcyjna potyczka armii, lecz starcie oparte na faktach, z datami, prawdziwymi dowódcami i realnymi wydarzeniami.</p>
+            <p class="game-desc">Sercem gry są taktyczne starcia jednostek na polu bitwy. Rozmieszczenie oddziałów ma kluczowe znaczenie, a sześć pozycji na planszy wymusza przemyślane decyzje ofensywne i defensywne. Każdy błąd może otworzyć drogę do szturmu na twierdzę przeciwnika. Rozgrywka podzielona jest na lata i pory roku, a losowe wydarzenia oraz zmienne warunki pogodowe potrafią diametralnie zmienić sytuację na froncie.</p>
+            <p class="game-desc">Skjaldborg to jednak coś więcej niż gra wojenna. Dzięki Księdze Scenariuszy każda kampania staje się opowieścią o konkretnej bitwie i jej uczestnikach. Możecie zmienić wynik historii, ale zawsze poznacie jej prawdziwy przebieg. To surowa, realistyczna podróż do epoki, w której historia pisała się na polach bitew.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px;" class="reveal-right delay-2">
+          <div class="game-stats">
+            <div class="stats-grid">
+              <div class="stat-item"><div class="stat-label">Dla ilu graczy</div><div class="stat-value">2</div></div>
+              <div class="stat-item"><div class="stat-label">Czas gry</div><div class="stat-value">60–120 min</div></div>
+              <div class="stat-item"><div class="stat-label">Wiek</div><div class="stat-value">14+</div></div>
+              <div class="stat-item"><div class="stat-label">Typ</div><div class="stat-value" style="font-size:0.85rem;">Asymetryczny pojedynek</div></div>
+            </div>
+          </div>
+          <div class="game-stats" style="flex:1;">
+            <h4>Podstawowe elementy rozgrywki</h4>
+            <div class="highlight-item"><strong>Scenariusze oparte na prawdziwych wydarzeniach.</strong></div>
+            <div class="highlight-item"><strong>Zadania poboczne i cele fabularne.</strong></div>
+            <div class="highlight-item"><strong>Wydarzenia i pogoda zmieniają przebieg gry.</strong></div>
+            <div class="highlight-item"><strong>Rozmieszczanie jednostek decyduje o ich sile.</strong></div>
+            <div class="highlight-item"><strong>Róźne możliwości osiągnięcia zwycięstwa</strong></div>
+          </div>
+          <a href="skjaldborgpl.html" class="btn-outline" style="text-align:center;">Przeczytaj więcej o Skjaldborg</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMEFOUND -->
+  <section class="community" id="community">
+    <div class="community-inner">
+      <p class="section-label">Dołącz do społeczności</p>
+      <div class="gold-divider center reveal delay-1"></div>
+      <h2 class="section-title reveal delay-2">Zostań częścią projektu</h2>
+      <p class="reveal delay-3">Dołącz do naszej społeczności, aby wziąć aktywny udział w procesie tworzenia nowej gry. Podziel się pomysłami i nwiąż kontakty z innymi entuzjastami gier planszowych.</p>
+      <div class="gamefound-card reveal delay-4">
+        <span class="gamefound-icon">🪓🛡️⚔️</span>
+        <h3>Gamefound</h3>
+        <p>Zostań naszym patronem</p>
+        <ul class="community-list">
+          <li>Podziel się swoimi pomysłami i miej realny wpływ na rozwój gry</li>
+          <li>Połącz się z nami i innymi fanami gier planszowych</li>
+          <li>Weź udział w dyskusjach z nami i z innymi członkami społeczności</li>
+          <li>Specjalne bonusy dla osób wspierających na wczesnym etapie</li>
+        </ul>
+        <a href="#" class="btn-gamefound">Dołącz do Gamefound</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <h2 class="reveal">Masz jakieś pomysły <br>lub sugestie?</br></h2>
+    <p class="reveal delay-1">Twoja opinia jest dla nas bardzo ważna.</p>
+    <a href="mailto:contact@carpetgames.com" class="btn-outline reveal delay-2">Napisz do nas</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Carpet Games</div>
+    <div class="footer-copy">© 2026 Toruń, Polska</div>
+    <div class="footer-links">
+      <a href="#">Gamefound</a>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Youtube</a>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
